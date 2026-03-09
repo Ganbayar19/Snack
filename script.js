@@ -50,8 +50,8 @@ function draw() {
   if (
     head.x < 0 ||
     head.y < 0 ||
-    head.x >= 400 ||
-    head.y >= 400 ||
+    head.x > canvas.width - box ||
+    head.y > canvas.height - box ||
     snake.some((s) => s.x === head.x && s.y === head.y)
   ) {
     clearInterval(game);
